@@ -1,0 +1,43 @@
+// Grid
+$width_xl: 1365px;
+$width_lg: 1170px;
+$width_md: 991px;
+$width_xs: 767px;
+$width_mob: 560px;
+
+$grid-width: 1170px;
+$grid-gutter: 30px;
+$grid-columns: 12;
+
+:root {
+   // colors
+   --primary: #111;
+   --accent: #2e80ec;
+   --hover-color: #1e90ff;
+
+   // other
+   --transition-duration: 0.2s;
+}
+
+%hover-line {
+   position: relative;
+   &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: auto;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background: var(--primary);
+      transition: width var(--transition-duration) ease;
+   }
+   &:hover,
+   &:focus {
+      &::after {
+         width: 100%;
+         left: 0;
+         right: auto;
+      }
+   }
+}
