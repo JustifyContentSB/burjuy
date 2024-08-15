@@ -1,9 +1,10 @@
 // Grid
-$width_xl: 1365px;
-$width_lg: 1170px;
-$width_md: 991px;
-$width_xs: 767px;
-$width_mob: 560px;
+$width_mob: 360px;
+$width_tab: 768px;
+$width_desk: 1024px;
+$width_md: 1280px;
+$width_big: 1440px;
+$width_large: 1920px;
 
 $grid-width: 1170px;
 $grid-gutter: 30px;
@@ -11,9 +12,7 @@ $grid-columns: 12;
 
 :root {
    // colors
-   --primary: #111;
-   --accent: #2e80ec;
-   --hover-color: #1e90ff;
+   --accent: #dd2b1c;
 
    // other
    --transition-duration: 0.2s;

@@ -1,26 +1,7 @@
-@import './base/layout';
+@import './base/all';
 
 @import 'btn';
+@import 'layout';
+@import 'section';
 
-.layout {
-   padding: 48px 0 64px;
-}
 
-.layout__inner {
-   display: flex;
-   align-items: flex-start;
-   justify-content: space-between;
-   gap: 32px;
-}
-
-.layout__main {
-   max-width: 976px;
-}
-
-.layout__main > *:not(:last-child) {
-   margin-bottom: 48px;
-}
-
-.layout__aside {
-   flex-grow: 1;
-}

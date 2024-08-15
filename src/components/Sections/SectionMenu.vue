@@ -1,25 +1,31 @@
 <template>
 
-   <section class="menu">
-      <div class="menu__inner">
-         <div class="menu__top">
-            <h2 class="menu__title title">{{ title }}</h2>
+   <section class="section section--menu">
+      <div class="section__wrapper">
+         <div class="section__header">
+            <h2 class="section__title">{{ title }}</h2>
          </div>
-         <ul class="menu__list">
-            <li class="menu__item" v-for="item in menu">
-               <div class="menu__img"><img :src="item.img" :alt="item.name"></div>
-               <div class="menu__info">
-                  <h3 class="menu__name">{{ item.name }}</h3>
-                  <div class="menu__text">
-                     <p v-for="text in item.text">{{ text }}</p>
-                  </div>
-                  <div class="menu__bottom">
-                     <p class="menu__price">от <span>{{ item.price }} ₸</span></p>
-                     <a class="menu__btn btn" href="#" @click="addProduct">Выбрать</a>
-                  </div>
+         <div class="section__content">
+            <div class="menu">
+               <div class="menu__inner">
+                  <ul class="menu__list">
+                     <li class="menu__item" v-for="item in menu">
+                        <div class="menu__img"><img :src="item.img" :alt="item.name"></div>
+                        <div class="menu__info">
+                           <h3 class="menu__name">{{ item.name }}</h3>
+                           <div class="menu__text">
+                              <p v-for="text in item.text">{{ text }}</p>
+                           </div>
+                           <div class="menu__bottom">
+                              <p class="menu__price">от <span>{{ item.price }} ₸</span></p>
+                              <a class="menu__btn btn" href="#" @click="addProduct">Выбрать</a>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
                </div>
-            </li>
-         </ul>
+            </div>
+         </div>
       </div>
    </section>
 
@@ -62,10 +68,6 @@ export default {
 </script>
 
 <style>
-
-.menu__top {
-   margin-bottom: 12px;
-}
 
 .menu__list {
    display: grid;
@@ -122,7 +124,7 @@ export default {
 
 .menu__price span {
    font-weight: 700;
-   color: #DD2B1C;
+   color: var(--accent);
 }
 
 </style>

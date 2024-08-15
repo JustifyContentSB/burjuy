@@ -1,76 +1,79 @@
 <template>
 
-   <section class="aside">
-      <div class="aside__inner">
-         <div class="aside__header">
-            <h2>Корзина</h2>
+   <section class="section section--basket">
+      <div class="section__wrapper">
+         <div class="section__header">
+            <h2 class="section__title">Корзина</h2>
          </div>
-         <div class="basket">
-            <div class="basket__empty" v-if="0">
-               <a class="basket__link" href="#"><img src="@/assets/images/icons/cart.svg" alt="корзина" width="24" height="24"></a>
-               <img src="@/assets/images/basket/fast-food.svg" alt="картинка" width="120" height="120">
-               <p class="basket__empty-text">Вы ещё не добавили <br> ни одного товара</p>
-            </div>
-            <div class="basket__main basket__main--full" v-else>
-               <div class="basket__manage">
-                  <div class="basket__top">
-                     <div class="basket__left">Товаров: <span class="basket__left-amount">2</span></div>
-                     <a class="basket__link" href="#"><img src="@/assets/images/icons/cart.svg" alt="корзина" width="24" height="24"></a>
-                  </div>
-                  <div class="basket__menu">
-                     <ul class="basket__menu-list">
-                        <li class="basket__menu-item">
-                           <div class="basket__menu-top">
-                              <div class="basket__menu-img">
-                                 <img src="@/assets/images/menu/sandwich-02.png" alt="Биффит маленький">
-                              </div>
-                              <div class="basket__menu-info">
-                                 <p class="basket__menu-name">Биффит маленький</p>
-                                 <p class="basket__menu-products">Сыр, перец, соус 1000 островов, соус Мексиканский</p>
-                              </div>
-                           </div>
-                           <div class="basket__menu-bottom">
-                              <div class="basket__menu-buttons">
-                                 <button class="basket__menu-button">-</button>
-                                 <span class="basket__menu-count">2</span>
-                                 <button class="basket__menu-button">+</button>
-                              </div>
-                              <p class="basket__menu-price">390 ₸</p>
-                              <button class="basket__menu-delete"><img src="@/assets/images/icons/close.svg" alt="удалить товар"></button>
-                           </div>
-                        </li>
-                        <li class="basket__menu-item">
-                           <div class="basket__menu-top">
-                              <div class="basket__menu-img">
-                                 <img src="@/assets/images/menu/burger-03.png" alt="Бургер">
-                              </div>
-                              <div class="basket__menu-info">
-                                 <p class="basket__menu-name">Бургер</p>
-                                 <p class="basket__menu-products">Кетчуп, майонез</p>
-                              </div>
-                           </div>
-                           <div class="basket__menu-bottom">
-                              <div class="basket__menu-buttons">
-                                 <button class="basket__menu-button">-</button>
-                                 <span class="basket__menu-count">2</span>
-                                 <button class="basket__menu-button">+</button>
-                              </div>
-                              <p class="basket__menu-price">390 ₸</p>
-                              <button class="basket__menu-delete"><img src="@/assets/images/icons/close.svg" alt="удалить товар"></button>
-                           </div>
-                        </li>
-                     </ul>
-                     <div class="basket__total">
-                        <p class="basket__total-text">Итого:</p>
-                        <p class="basket__total-price">780 ₸</p>
+         <div class="section__content">
+            <div class="basket">
+               <div class="basket__empty" v-if="0">
+                  <a class="basket__link" href="#"><img src="@/assets/images/icons/cart.svg" alt="корзина" width="24" height="24"></a>
+                  <img src="@/assets/images/basket/fast-food.svg" alt="картинка" width="120" height="120">
+                  <p class="basket__empty-text">Вы ещё не добавили <br> ни одного товара</p>
+               </div>
+               <div class="basket__main basket__main--full" v-else>
+                  <div class="basket__manage">
+                     <div class="basket__top">
+                        <div class="basket__left">Товаров: <span class="basket__left-amount">2</span></div>
+                        <a class="basket__link" href="#"><img src="@/assets/images/icons/cart.svg" alt="корзина" width="24" height="24"></a>
                      </div>
-                  </div>
-                  <div class="basket__footer">
-                     <a href="#" class="btn">Заказать</a>
+                     <div class="basket__menu">
+                        <ul class="basket__menu-list">
+                           <li class="basket__menu-item">
+                              <div class="basket__menu-top">
+                                 <div class="basket__menu-img">
+                                    <img src="@/assets/images/menu/sandwich-02.png" alt="Биффит маленький">
+                                 </div>
+                                 <div class="basket__menu-info">
+                                    <p class="basket__menu-name">Биффит маленький</p>
+                                    <p class="basket__menu-products">Сыр, перец, соус 1000 островов, соус Мексиканский</p>
+                                 </div>
+                              </div>
+                              <div class="basket__menu-bottom">
+                                 <div class="basket__menu-buttons">
+                                    <button class="basket__menu-button">-</button>
+                                    <span class="basket__menu-count">2</span>
+                                    <button class="basket__menu-button">+</button>
+                                 </div>
+                                 <p class="basket__menu-price">390 ₸</p>
+                                 <button class="basket__menu-delete"><img src="@/assets/images/icons/close.svg" alt="удалить товар"></button>
+                              </div>
+                           </li>
+                           <li class="basket__menu-item">
+                              <div class="basket__menu-top">
+                                 <div class="basket__menu-img">
+                                    <img src="@/assets/images/menu/burger-03.png" alt="Бургер">
+                                 </div>
+                                 <div class="basket__menu-info">
+                                    <p class="basket__menu-name">Бургер</p>
+                                    <p class="basket__menu-products">Кетчуп, майонез</p>
+                                 </div>
+                              </div>
+                              <div class="basket__menu-bottom">
+                                 <div class="basket__menu-buttons">
+                                    <button class="basket__menu-button">-</button>
+                                    <span class="basket__menu-count">2</span>
+                                    <button class="basket__menu-button">+</button>
+                                 </div>
+                                 <p class="basket__menu-price">390 ₸</p>
+                                 <button class="basket__menu-delete"><img src="@/assets/images/icons/close.svg" alt="удалить товар"></button>
+                              </div>
+                           </li>
+                        </ul>
+                        <div class="basket__total">
+                           <p class="basket__total-text">Итого:</p>
+                           <p class="basket__total-price">780 ₸</p>
+                        </div>
+                     </div>
+                     <div class="basket__footer">
+                        <a href="#" class="btn">Заказать</a>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+         
       </div>
    </section>
 
@@ -85,12 +88,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-.aside {
-   &__header {
-      margin-bottom: 12px;
-   }
-}
 
 .basket {
    padding: 20px 20px 16px;
